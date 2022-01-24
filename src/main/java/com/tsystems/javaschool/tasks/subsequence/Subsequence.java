@@ -14,7 +14,23 @@ public class Subsequence {
      */
     @SuppressWarnings("rawtypes")
     public boolean find(List x, List y) {
-        // TODO: Implement the logic here
-        return false;
+
+        int offset = 0;
+        int counter = 0;
+        try {
+            if (y.equals(null)) throw new NullPointerException();
+            for (Object o : x) {
+                for (int j = offset; j < y.size(); j++) {
+                    if (o.equals(y.get(j))) {
+                        offset = j + 1;
+                        counter++;
+                        break;
+                    }
+                }
+            }
+        } catch (NullPointerException e) {
+            throw new IllegalArgumentException();
+        }
+        return counter == x.size();
     }
 }
