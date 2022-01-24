@@ -1,3 +1,5 @@
+package com.tsystems.javaschool.tasks.calculator;
+
 public class Calculator {
     int fromIndex = 0;
 
@@ -32,7 +34,12 @@ public class Calculator {
 
         return calculateManyOperations(statement);
     }
-
+    
+    /**
+     * вычисления значения выражения с одной операцией
+     * @param s входная строка
+     * @return строка - значение выражения
+     */
     String calculateOneOperation(String s) {
         String result;
         int intResult = 0;
@@ -110,7 +117,12 @@ public class Calculator {
         }
         return result;
     }
-
+    
+    /**
+     * вычисление значения выражения с несколькими операциями
+     * @param s входная строка
+     * @return строка - значение выражения
+     */
     String calculateManyOperations(String s) {
         try {
             while (s.indexOf('*') != -1 || s.indexOf('/') != -1) {
