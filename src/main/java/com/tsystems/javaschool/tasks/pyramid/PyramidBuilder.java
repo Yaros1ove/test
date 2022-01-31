@@ -135,7 +135,3 @@ public class PyramidBuilder {
             quickSort(array, i, high);
     }
 }
-
-class CannotBuildPyramidException extends Exception {
-
-}
